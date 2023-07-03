@@ -25,8 +25,9 @@ public class StatsService {
 
     public int getAvgMonth(int[] avg) {
         int avgMonth = 0;
+        int summ = getSumMonth(avg);
         for (int i = 0; i < avg.length; i++) {
-            if (avg[i] < 180) {
+            if (avg[i] < summ) {
                 avgMonth += avg[i];
             }
         }
